@@ -1466,6 +1466,7 @@ pub(crate) async fn open_named_connection(
     Ok((connection, error_receiver))
 }
 
+#[allow(clippy::needless_pass_by_ref_mut)]
 async fn perform_authenticate(
     connection: &mut Connection,
     authenticate: &Authenticate,
